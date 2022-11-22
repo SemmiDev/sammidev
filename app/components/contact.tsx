@@ -1,18 +1,23 @@
 import { useRef } from 'react';
-import Etc from './etc';
 import { ContactIcon } from './Icons';
 
 function Contact() {
     const nameRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
-    let url = 'https://api.whatsapp.com/send?phone=6282387325971&text=';
 
-    const handleClick = () => {
+    const handleSubmitForm = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         const name = nameRef.current?.value;
         const message = messageRef.current?.value;
-        const text = `Halo mas Sam, perkenalkan nama saya ${name}, ${message}`;
-        const encodedText = encodeURIComponent(text);
-        window.open(url + encodedText);
+
+        if (name === '' || message === '') {
+            alert('Please fill the form');
+        } else {
+            let url = 'https://api.whatsapp.com/send?phone=6282387325971&text=';
+            const text = `Halo mas Sam, perkenalkan nama saya ${name}, ${message}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(url + encodedText);
+        }
     };
 
     return (
@@ -21,28 +26,31 @@ function Contact() {
                 <ContactIcon /> Contact
             </h1>
 
-            <input
-                type='text'
-                ref={nameRef}
-                required={true}
-                placeholder='Type your name'
-                className='w-full max-w-xs input input-bordered input-primary'
-            />
+            <form onSubmit={handleSubmitForm} className='flex flex-col gap-y-3'>
+                <input
+                    type='text'
+                    ref={nameRef}
+                    required={true}
+                    placeholder='Type your name'
+                    className='w-full max-w-xs text-sm input input-bordered input-primary text-primary'
+                />
 
-            <textarea
-                className='w-full max-w-xs textarea textarea-primary'
-                placeholder='Type your message'
-                ref={messageRef}
-                required={true}
-                maxLength={500}
-                rows={5}
-            ></textarea>
-            <button
-                className='w-full max-w-xs mb-12 btn btn-outline btn-primary'
-                onClick={handleClick}
-            >
-                Kirim Pesan
-            </button>
+                <textarea
+                    className='w-full max-w-xs text-sm border textarea border-primary text-primary'
+                    placeholder='Type your message'
+                    ref={messageRef}
+                    required={true}
+                    maxLength={500}
+                    rows={5}
+                ></textarea>
+
+                <button
+                    type='submit'
+                    className='w-full max-w-xs mb-12 btn btn-outline btn-primary'
+                >
+                    Kirim Pesan
+                </button>
+            </form>
         </div>
     );
 }
