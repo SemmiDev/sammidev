@@ -15,7 +15,14 @@ function CertificateItem({ title, description, imgSrc }: CertificateItemProps) {
                     <h2 className='card-title'>🌟🌟🌟</h2>
                     <p>{description}</p>
                     <div className='justify-end card-actions'>
-                        <button className='btn btn-outline'>Lihat</button>
+                        <a
+                            href={imgSrc}
+                            target='_blank'
+                            rel='noreferrer noopener'
+                            className='btn btn-outline'
+                        >
+                            Lihat
+                        </a>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ export const portfolioData: PortfolioItemProps[] = [
         title: 'React Todo',
         description: 'simple todolist app with react.',
         stack: ['react', 'Typescript', 'TailwindCSS', 'DaisyUI'],
-        link: 'https://github.com/SemmiDev/fiber-shortener',
+        link: 'https://github.com/SemmiDev/react-todo',
     },
     {
         title: 'Todo App',

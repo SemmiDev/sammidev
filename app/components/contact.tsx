@@ -1,6 +1,5 @@
 import { useRef } from 'react';
-import Clock from './clock';
-import Footer from './footer';
+import Etc from './etc';
 import { ContactIcon } from './Icons';
 
 function Contact() {
@@ -44,9 +43,6 @@ function Contact() {
             >
                 Kirim Pesan
             </button>
-
-            <Clock />
-            <Footer />
         </div>
     );
 }

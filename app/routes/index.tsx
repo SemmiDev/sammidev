@@ -3,12 +3,16 @@ import Achievement from '~/components/achievement';
 import Certificate from '~/components/certificate';
 import Contact from '~/components/contact';
 import Education from '~/components/education';
+import Etc from '~/components/etc';
 import Experience from '~/components/experience';
+import Footer from '~/components/footer';
 import Hobby from '~/components/hobby';
 import Intro from '~/components/intro';
 import NavBar, { listTheme, SwitchThemeButton } from '~/components/navbar';
 import Portfolio from '~/components/portfolio';
 import Skills from '~/components/skills';
+import Clock from '../components/clock';
+import Photography from '../components/photography';
 
 interface WindowsMockupProps {
     children: JSX.Element[];
@@ -55,13 +59,19 @@ export default function Index() {
                     <Portfolio />
 
                     <div className='divider'></div>
+                    <Photography />
+
+                    <div className='divider'></div>
                     <Hobby />
 
                     <div className='divider'></div>
                     <div className='grid w-full grid-cols-1 gap-12 md:grid-cols-2'>
                         <Skills />
-                        <Contact />
+                        <Etc />
                     </div>
+
+                    <Clock />
+                    <Footer />
                 </WindowsMockup>
             </div>
         </main>
