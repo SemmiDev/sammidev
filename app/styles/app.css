@@ -3158,6 +3158,10 @@ html {
   margin-bottom: 3rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -3176,10 +3180,6 @@ html {
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .-mb-8 {
@@ -3274,6 +3274,18 @@ html {
   width: 91.666667%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -3282,16 +3294,16 @@ html {
   max-width: 20rem;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
 }
 
 .max-w-7xl {
@@ -3409,6 +3421,10 @@ html {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -3420,6 +3436,11 @@ html {
 .border-base-300 {
   --tw-border-opacity: 1;
   border-color: hsl(var(--b3, var(--b2)) / var(--tw-border-opacity));
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
 .border-secondary {
@@ -3435,11 +3456,6 @@ html {
 .border-error {
   --tw-border-opacity: 1;
   border-color: hsl(var(--er) / var(--tw-border-opacity));
-}
-
-.border-primary {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
 .bg-base-100 {
@@ -3718,6 +3734,12 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:border-accent:hover {
   --tw-border-opacity: 1;
   border-color: hsl(var(--a) / var(--tw-border-opacity));
@@ -3730,6 +3752,11 @@ html {
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.hover\:shadow-warning:hover {
+  --tw-shadow-color: hsl(var(--wa));
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:ring-info:hover {
@@ -3809,6 +3836,11 @@ html {
     line-height: 1.25rem;
   }
 
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -3816,11 +3848,6 @@ html {
 
   .md\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Achievement from '~/components/achievement';
 import Certificate from '~/components/certificate';
-import Contact from '~/components/contact';
+import Currently from '~/components/currencly';
 import Education from '~/components/education';
 import Etc from '~/components/etc';
 import Experience from '~/components/experience';
@@ -11,8 +11,8 @@ import Intro from '~/components/intro';
 import NavBar, { listTheme, SwitchThemeButton } from '~/components/navbar';
 import Portfolio from '~/components/portfolio';
 import Skills from '~/components/skills';
-import Clock from '../components/clock';
-import Photography from '../components/photography';
+import Clock from '~/components/clock';
+import Photography from '~/components/photography';
 
 interface WindowsMockupProps {
     children: JSX.Element[];
@@ -41,6 +41,7 @@ export default function Index() {
                         />
                     </NavBar>
                     <Intro />
+                    <Currently />
 
                     <div className='divider'></div>
 
