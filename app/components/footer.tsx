@@ -63,14 +63,20 @@ function Footer() {
                         </a>
                     </li>
                 </ul>
-                <p className='max-w-md mx-auto mt-8 font-sans text-lg font-bold tracking-widest text-center text-primary bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200'>
-                    Made with ♡ {new Date().getFullYear()}
-                </p>
-                <p className='flex items-center justify-center max-w-md mx-auto mt-2 font-sans text-lg font-bold tracking-widest text-center gap-x-2 text-primary bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200'>
-                    <LocationIcon />
-                    Pekanbaru
-                </p>
             </div>
+
+            <p className='max-w-md mx-auto mt-8 font-sans text-lg font-bold tracking-widest text-center text-primary bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200'>
+                Made with ♡ {new Date().getFullYear()}
+            </p>
+            <p className='flex items-center justify-center max-w-md mx-auto mt-2 font-sans text-lg font-bold tracking-widest text-center gap-x-2 text-primary bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200'>
+                <LocationIcon />
+                Pekanbaru
+            </p>
+            <img
+                src='/instagram/29.jpg'
+                alt='me2'
+                className='object-cover mt-12 w-full h-[500px] transition duration-100 ease-linear rounded-2xl hover:scale-95'
+            />
         </footer>
     );
 }

@@ -8,7 +8,7 @@ function Photography() {
     return (
         <div>
             <h1 className='flex items-center justify-center mx-auto mt-5 mb-8 text-3xl font-bold gap-x-2 md:text-4xl text-secondary'>
-                <PhotographyIcon /> Photography
+                <PhotographyIcon /> Cinematic
             </h1>
 
             <div className='flex flex-col items-center justify-center mx-auto mb-5'>
@@ -48,11 +48,6 @@ function Photography() {
                     alt='me1'
                     className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
                 />{' '}
-                <img
-                    src='/instagram/29.jpg'
-                    alt='me2'
-                    className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
-                />
             </div>
 
             <div className='flex flex-col items-center justify-center mb-12 md:flex-row'>

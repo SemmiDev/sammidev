@@ -5,7 +5,7 @@ export interface PhotographyProps {
 
 export const photographyData: PhotographyProps[] = [];
 
-const notAvailable: number[] = [1, 13, 21, 22, 23, 28, 50];
+const notAvailable: number[] = [1, 13, 19, 21, 22, 23, 28, 50];
 
 for (let i = 1; i <= 50; i++) {
     if (notAvailable.includes(i)) continue;
