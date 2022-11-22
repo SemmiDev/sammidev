@@ -47,6 +47,11 @@ function Photography() {
                     src='/instagram/25.jpg'
                     alt='me1'
                     className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
+                />
+                <img
+                    src='/instagram/56.jpg'
+                    alt='me2'
+                    className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
                 />{' '}
             </div>
 
