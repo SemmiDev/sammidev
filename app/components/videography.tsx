@@ -2,7 +2,9 @@ function Videography() {
     return (
         <div className='flex flex-col items-center justify-center w-full gap-y-5'>
             <video
-                controls={true}
+                // controls={true}
+                autoPlay={true}
+                loop={true}
                 width='full'
                 height='full'
                 typeof='video/mp4'

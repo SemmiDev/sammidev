@@ -13,18 +13,7 @@ import Portfolio from '~/components/portfolio';
 import Skills from '~/components/skills';
 import Clock from '~/components/clock';
 import Photography from '~/components/photography';
-
-interface WindowsMockupProps {
-    children: JSX.Element[];
-}
-
-function WindowsMockup(props: WindowsMockupProps) {
-    return (
-        <div className='p-8 my-5 border mockup-phone md:mockup-window bg-base-300'>
-            {props.children}
-        </div>
-    );
-}
+import WindowsMockup from '~/components/mockup';
 
 export default function Index() {
     const [theme, setTheme] = useState<string>(listTheme[0]); // forest
