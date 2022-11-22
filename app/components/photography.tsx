@@ -42,7 +42,7 @@ function Photography() {
                 </div>
             </div>
 
-            <div className='flex flex-col items-center justify-center mb-12 '>
+            <div className='flex flex-col items-center justify-center mb-12 gap-y-3 '>
                 <img
                     src='/instagram/25.jpg'
                     alt='me1'

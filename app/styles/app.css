@@ -3206,26 +3206,6 @@ html {
   height: 500px;
 }
 
-.h-\[700px\] {
-  height: 700px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
-.h-\[1000px\] {
-  height: 1000px;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -3367,6 +3347,10 @@ html {
   row-gap: 1.25rem;
 }
 
+.gap-y-3 {
+  row-gap: 0.75rem;
+}
+
 .gap-y-2 {
   row-gap: 0.5rem;
 }
@@ -3466,11 +3450,6 @@ html {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-scale-down {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
 }
 
 .p-2 {
