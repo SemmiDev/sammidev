@@ -5,7 +5,7 @@ function Currently() {
         <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-col items-center justify-center mt-2 mb-8 text-3xl font-bold text-center gap-x-2 md:text-4xl text-secondary'>
                 <span className='flex items-center mb-8 text-xs justify-evenly gap-x-2 md:text-sm text-primary'>
-                    <CurrentlyIcon /> Sekarang lagi asyiknya belajar ML dari
+                    Sekarang lagi asyiknya belajar ML dari
                     e-book yg keren ini
                 </span>
                 <a
