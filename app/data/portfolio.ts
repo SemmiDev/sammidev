@@ -7,9 +7,20 @@ export interface PortfolioItemProps {
 
 export const portfolioData: PortfolioItemProps[] = [
     {
+        title: 'Image Compressor',
+        description: 'Simple image compressor.',
+        stack: [
+            'Javascript',
+            'Browser-image-compressor',
+            'Tailwindcss',
+            'React',
+        ],
+        link: 'https://github.com/SemmiDev/compresssin',
+    },
+    {
         title: 'Mem DB',
         description: 'Simple key value datastore.',
-        stack: ['Golang', 'Net', 'Http', 'Concurrency'],
+        stack: ['Golang', 'Http', 'Concurrency'],
         link: 'https://github.com/SemmiDev/memdb',
     },
     {
