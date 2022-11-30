@@ -30,7 +30,7 @@ export default function Index() {
                         />
                     </NavBar>
                     <Intro />
-                    <Currently />
+                    {/* <Currently /> */}
 
                     <div className='divider'></div>
 
