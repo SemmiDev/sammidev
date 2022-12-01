@@ -6,7 +6,7 @@ function Hobby() {
     return (
         <div className='flex flex-col items-center justify-center mx-auto mb-5'>
             <h1 className='flex items-center justify-center mt-5 mb-8 text-3xl font-bold text-center gap-x-2 md:text-4xl text-secondary'>
-                <HobbyIcon /> Hobby
+                <HobbyIcon /> Dikala Gabut
             </h1>
 
             <div className='my-5 indicator'>

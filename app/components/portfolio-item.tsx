@@ -18,9 +18,7 @@ function PortfolioItem({
                     {title}
                 </h3>
 
-                <p className='my-3 text-xs text-primary-content'>
-                    {description}
-                </p>
+                <p className='my-3 text-xs text-primary'>{description}</p>
 
                 <p className='flex flex-row flex-wrap items-center justify-start gap-2 text-xs md:text-sm '>
                     {stack.map((item, index) => (

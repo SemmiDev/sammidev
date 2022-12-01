@@ -2,17 +2,7 @@
 module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}'],
     daisyui: {
-        themes: [
-            'forest',
-            'synthwave',
-            'dark',
-            'night',
-            'coffee',
-            'halloween',
-            'black',
-            'business',
-            'dracula',
-        ],
+        themes: ['night'],
     },
     darkMode: 'class',
     theme: {

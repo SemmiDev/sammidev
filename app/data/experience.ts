@@ -20,4 +20,8 @@ export const experienceData: ExperienceProps[] = [
         name: 'Asisten Lab [Prodi MI] ➜ Mata Kuliah Konsep Pemrograman (Java)',
         dataContent: '★',
     },
+    {
+        name: 'Asisten Mentor [Ruangguru Camp] ➜ Kelas Backend (Go)',
+        dataContent: '★',
+    },
 ];

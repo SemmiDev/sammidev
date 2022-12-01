@@ -8,16 +8,6 @@ const days: string[] = [
     'Saturday',
 ];
 
-const greeting = (time: number): string | undefined => {
-    if (time >= 0 && time < 12) {
-        return 'Good Morning';
-    } else if (time >= 12 && time < 18) {
-        return 'Good Afternoon';
-    } else if (time >= 18 && time < 24) {
-        return 'Good Evening';
-    }
-};
-
 function PhotoProfile() {
     return (
         <div className='mb-5 avatar'>
@@ -30,8 +20,7 @@ function PhotoProfile() {
 
 function Intro() {
     const time: Date = new Date();
-    const salutation: string = `
-    ${greeting(time.getHours())} 😊 Happy ${days[time.getDay()]}`;
+    const salutation: string = `Happy ${days[time.getDay()]} 😊`;
 
     return (
         <div className='flex flex-col items-center justify-center pt-20 pb-6 text-center'>

@@ -8,7 +8,7 @@ function Photography() {
     return (
         <div>
             <h1 className='flex items-center justify-center mx-auto mt-5 mb-8 text-3xl font-bold gap-x-2 md:text-4xl text-secondary'>
-                <PhotographyIcon /> Cinematic
+                <PhotographyIcon /> Cekrek
             </h1>
 
             <div className='flex flex-col items-center justify-center mx-auto mb-5'>
@@ -42,19 +42,6 @@ function Photography() {
                 </div>
             </div>
 
-            <div className='flex flex-col items-center justify-center mb-12 gap-y-3 '>
-                <img
-                    src='/instagram/25.jpg'
-                    alt='me1'
-                    className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
-                />
-                <img
-                    src='/instagram/56.jpg'
-                    alt='me2'
-                    className='object-cover w-full h-full transition duration-100 ease-linear rounded-2xl hover:scale-95'
-                />{' '}
-            </div>
-
             <div className='flex flex-col items-center justify-center mb-12 md:flex-row'>
                 <div className='grid grid-cols-3 gap-4 md:grid-cols-3 lg:grid-cols-5'>
                     {photographyData.map((photo, index) => (
@@ -65,10 +52,6 @@ function Photography() {
                         />
                     ))}
                 </div>
-            </div>
-
-            <div className='flex flex-col items-center justify-center mb-5'>
-                <Videography />
             </div>
         </div>
     );
