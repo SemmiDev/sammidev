@@ -1,0 +1,96 @@
+---
+title: Regresi Logistik
+slug: regresi-logistik
+date: 01 Desember 2022
+meta:
+    title: Regresi Logistik
+    description: Mengenal regresi logistik pada machine learning.
+headers:
+    Cache-Control: max-age=7200
+---
+
+# Regresi Logistik
+
+**Regresi Logistik** merupakan salah satu metode yang bisa digunakan untuk melakukan **klasifikasi**.
+
+> **Klasifikasi** adalah suatu pengelompokan data di mana data yang digunakan mempunyai **label** atau **target**. Pada jenis task ini, program komputer diminta untuk **menebak** atau **memilih** kategori/kelas dari data. Pada task ini **kategori/kelas** telah ditetapkan sebelumnya. Contohnya adalah **klasifikasi emosi** pada foto manusia dengan **tiga** kelas yaitu **Happy, Angry dan Neutral**. Aplikasi tersebut harus memilih salah satu (dalam kasus tertentu bisa lebih dari satu) dari **tiga kelas** tersebut berdasarkan foto yang diberikan.
+
+**Regresi Logistik** ini biasanya digunakan untuk menyelesaikan kasus-kasus **klasifikasi biner** dimana masalah-masalah yang dihadapi hanya memiliki atau menghasilkan **dua output kelas**, seperti **ya atau tidak**, **0 atau 1** untuk setiap input data yang diberikan.
+
+Metode ini menggunakan beberapa variabel **prediktor**, baik **numerik** maupun **kategori**. Misalnya, probabilitas bahwa orang yang menderita **serangan jantung** pada waktu tertentu dapat diprediksi dari **informasi usia, jenis kelamin, dan indeks massa tubuh**.
+
+Sebagai contoh, kita ingin memprediksi tumor ganas berdasarkan ukurannya. Semakin besar ukurannya maka tumor dapat dikatakan tumor ganas. Jika digambarkan dalam bentuk grafis, dengan mengganti nilai ganas dan tidak menjadi 1 dan 0 maka didapatkan seperti pada gambar dibawah. Jika permasalahan ini dipecahkan menggunakan metode linier maka model yang dihasilkan tidak akurat karena variabel dependennya bernilai hanya 0 atau 1 . **Fungsi linier** tidak cocok untuk mengatasi permasalahan ini, salah satu fungsi yang cocok adalah **fungsi logistik**.
+
+![Regresi Linear](/posts/ilustrasiRegresiLinear.png)
+
+## Fungsi Logistik
+
+**Regresi logistik** diambil namanya dari fungsi yang digunakan yaitu **fungsi logistik**. **Fungsi logistik** ini sering juga disebut fungsi **sigmoid** yang dikembangkan oleh ahli statistika untuk mendeskripsikan pertumbuhan populasi pada kasus ekologi. Kurva yang dihasilkan berbentuk S yang bernilai di antara 0 dan 1. Adapun formula untuk **sigmoid** adalah ... to be continue
+![Fungsi Sigmoid](/posts/fungsiSigmoid.png)
+
+## Persamaan Regresi Logistik
+
+**Regresi Logistik** merupakan regresi linear yang substitusi ke
+dalam fungsi logistik, berikut representasi persamaannya.
+![Persamaan Regresi Logistik](/posts/persamaanRegresiLogistik.png)
+
+Dimana **Y** adalah output yang akan diprediksi, sedangkan **b0** sampai
+**bn** adalah **koefisien**, dan **x** adalah variabel-variape independennya. Beberapa
+keuntungan dari penggunaan regresi logistic diantaranya:
+
+-   **Mudah digunakan**. Proses pelatihan dan penggunaan model cukup mudah dan tidak membutuhkan banyak maintenance.
+-   **Interpretability**. Modelnya mudah untuk diinterpretasikan.
+-   **Scalability**. Model algoritma ini dapat dilatih dengan cepat dan efisien serta membutuhkan daya komputasi yang rendah
+
+## Implementasi
+
+Implementasi **regresi logistic** menggunakan **Scikit-Learn** sangat sederhana.
+Pada library tersebut, juga dimplementasikan **regresi logistic** dengan prinsip **OVR (One versus Rest)** dan Maximum Entropi.
+
+Langkah pertama adalah memanggil library yang akan digunakan yaitu
+**LogisticRegression** dari **sklearn.linear_model**
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+```
+
+Setelah itu kita akan membuat 10 data dan 10 label sebagai data latih
+sekaligus data uji.
+
+```python
+x = np.arange(10).reshape(-1,1)
+y = np.array([0,0,0,0,1,1,1,1,1,1])
+```
+
+Selanjutnya adalah membuat model model regresi dan melatihnya
+
+```python
+model = LogisticRegression(random_state=1)
+model.fit(x,y)
+```
+
+Hasil pelatihan dapat dilihat melalui attribute **classes\_**, **intercept\_** dan **coef\_**
+
+```python
+print('Kelas :', model.classes_)
+print('Koefisien Model :', model.coef_)
+print('Intercept Model :', model.intercept_)
+```
+
+Pada uji coba, seperti yang telah dijelaskan bahwa algoritma ini akan
+memberikan luaran berupa probabilitas. Kotak merah merupakan
+proababilitas untuk label 0, sedangkan Biru untuk label 1
+
+Adapun hasil prediksi dan akurasi adalah sebagai berikut
+
+```python
+model.predict(x)
+model.score(x,y)
+```
+
+```
+
+```
